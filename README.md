@@ -1,0 +1,2 @@
+# KasaFiskalna
+ Projekt kasy fiskalnej.
