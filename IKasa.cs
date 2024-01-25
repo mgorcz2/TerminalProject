@@ -10,5 +10,7 @@ namespace KasaFiskalna
     {
         public void Start();
         public void End();
+
+        public void addItem();
     }
 }

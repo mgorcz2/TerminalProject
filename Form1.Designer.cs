@@ -325,12 +325,12 @@
         private Button button3;
         private Button rachunek;
         private TextBox textBox2;
-        private TextBox display;
         private Button add;
         private Button START;
         private Button button10;
         private Button Base;
         private Button emergency;
         private Panel panel1;
+        public TextBox display;
     }
 }
