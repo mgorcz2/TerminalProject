@@ -25,9 +25,12 @@ namespace KasaFiskalna.receipt
             items.Add(item);
             totalPrice = totalPrice + item.getPrice();
         }
-        public void RemoveProduct(Product item)
+        public void RemoveLast()
         {
-            items.RemoveAll(p => p == item);
+            if (items.Count > 0)
+            {
+                items.RemoveAt(items.Count - 1);
+            }
         }
         public override string ToString()
         {

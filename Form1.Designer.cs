@@ -48,6 +48,7 @@
             Base = new Button();
             emergency = new Button();
             panel1 = new Panel();
+            adderror = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -160,6 +161,7 @@
             button1.TabIndex = 0;
             button1.Text = "1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -174,12 +176,13 @@
             // 
             // rachunek
             // 
+            rachunek.BackColor = Color.RosyBrown;
             rachunek.Location = new Point(517, 477);
             rachunek.Name = "rachunek";
-            rachunek.Size = new Size(117, 40);
+            rachunek.Size = new Size(126, 27);
             rachunek.TabIndex = 14;
-            rachunek.Text = "RACHUNEK";
-            rachunek.UseVisualStyleBackColor = true;
+            rachunek.Text = "usuń ostatni";
+            rachunek.UseVisualStyleBackColor = false;
             rachunek.Click += rachunek_Click;
             // 
             // textBox2
@@ -200,7 +203,7 @@
             display.Name = "display";
             display.Size = new Size(282, 51);
             display.TabIndex = 11;
-            display.Text = "SDSD";
+            display.Text = "----";
             display.TextAlign = HorizontalAlignment.Center;
             display.WordWrap = false;
             // 
@@ -232,7 +235,7 @@
             // 
             // button10
             // 
-            button10.BackColor = Color.FromArgb(255, 255, 192);
+            button10.BackColor = Color.FromArgb(255, 255, 128);
             button10.Location = new Point(649, 474);
             button10.Name = "button10";
             button10.Size = new Size(95, 79);
@@ -257,16 +260,18 @@
             emergency.Cursor = Cursors.Cross;
             emergency.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             emergency.ForeColor = SystemColors.ButtonFace;
-            emergency.Location = new Point(801, 533);
+            emergency.Location = new Point(180, 532);
             emergency.Name = "emergency";
             emergency.Size = new Size(183, 109);
             emergency.TabIndex = 18;
             emergency.Text = "EMERGENCY BUTTON";
             emergency.UseVisualStyleBackColor = false;
+            emergency.Click += emergency_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Silver;
+            panel1.Controls.Add(adderror);
             panel1.Controls.Add(emergency);
             panel1.Controls.Add(Base);
             panel1.Controls.Add(button10);
@@ -288,8 +293,19 @@
             panel1.Controls.Add(button2);
             panel1.Location = new Point(3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1114, 644);
+            panel1.Size = new Size(805, 644);
             panel1.TabIndex = 18;
+            // 
+            // adderror
+            // 
+            adderror.BackColor = SystemColors.ActiveBorder;
+            adderror.ForeColor = Color.Red;
+            adderror.Location = new Point(461, 3);
+            adderror.Multiline = true;
+            adderror.Name = "adderror";
+            adderror.ReadOnly = true;
+            adderror.Size = new Size(223, 20);
+            adderror.TabIndex = 19;
             // 
             // Form1
             // 
@@ -298,7 +314,7 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(1134, 660);
+            ClientSize = new Size(809, 660);
             Controls.Add(panel1);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -332,5 +348,6 @@
         private Button emergency;
         private Panel panel1;
         public TextBox display;
+        private TextBox adderror;
     }
 }

@@ -39,7 +39,7 @@ namespace KasaFiskalna.Produkt
             StringBuilder s1 = new StringBuilder();
             foreach (var el in products)
             {
-                s1.Append(el.ToString()+Environment.NewLine);
+                s1.Append(el+Environment.NewLine);
             }
             return s1.ToString();
         }

@@ -16,3 +16,4 @@ E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\KasaFiskalna.pdb
 E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\KasaFiskalna.genruntimeconfig.cache
 E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\ref\KasaFiskalna.dll
 E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\KasaFiskalna.Form2.resources
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\Emergency.wav
