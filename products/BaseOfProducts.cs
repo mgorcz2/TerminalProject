@@ -28,7 +28,11 @@ namespace KasaFiskalna.Produkt
         {
             products.RemoveWhere(p=>p.getCode().Equals(code));
         }
-       
+
+        public Product Find(string code)
+        {
+            return products.FirstOrDefault(p => p.getCode().Equals(code));
+        }
 
         public override string ToString()
         {
