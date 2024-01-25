@@ -44,6 +44,7 @@
             add = new Button();
             rachunek = new Button();
             button10 = new Button();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -179,10 +180,11 @@
             add.TabIndex = 13;
             add.Text = "DODAJ";
             add.UseVisualStyleBackColor = false;
+            add.Click += add_Click;
             // 
             // rachunek
             // 
-            rachunek.Location = new Point(376, 180);
+            rachunek.Location = new Point(409, 45);
             rachunek.Name = "rachunek";
             rachunek.Size = new Size(140, 49);
             rachunek.TabIndex = 14;
@@ -200,6 +202,15 @@
             button10.Text = "ZAKONCZ";
             button10.UseVisualStyleBackColor = false;
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(388, 100);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ScrollBars = ScrollBars.Vertical;
+            textBox2.Size = new Size(187, 273);
+            textBox2.TabIndex = 16;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -207,6 +218,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(621, 461);
+            Controls.Add(textBox2);
             Controls.Add(button10);
             Controls.Add(rachunek);
             Controls.Add(add);
@@ -248,5 +260,6 @@
         private Button add;
         private Button rachunek;
         private Button button10;
+        private TextBox textBox2;
     }
 }
