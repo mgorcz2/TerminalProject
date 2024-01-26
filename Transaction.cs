@@ -18,7 +18,7 @@ namespace KasaFiskalna
 
         public Product addItem(String productCode, BaseOfProducts baseof)
         {
-           return baseof.Find(productCode);
+           return baseof.FindByCodeProduct(productCode);
         }
 
         public void End()

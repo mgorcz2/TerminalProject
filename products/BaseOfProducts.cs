@@ -60,11 +60,15 @@ namespace KasaFiskalna.Produkt
             products.RemoveWhere(p=>p.getCode().Equals(code));
         }
 
-        public Product Find(string code)
+        public Product FindByCodeProduct(string code)
         {
             return products.FirstOrDefault(p => p.getCode().Equals(code));
         }
 
+        public Product FindByNameProduct(string name)
+        {
+            return products.FirstOrDefault(p => p.getName().Equals(name,StringComparison.OrdinalIgnoreCase));
+        }
         public override string ToString()
         {
             StringBuilder s1 = new StringBuilder();

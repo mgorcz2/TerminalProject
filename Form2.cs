@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using KasaFiskalna.Produkt;
+﻿using KasaFiskalna.Produkt;
 
 namespace KasaFiskalna
 {
@@ -37,7 +27,25 @@ namespace KasaFiskalna
                 var listViewItem = new ListViewItem(row);
                 listView1.Items.Add(listViewItem);
             }
-            textBox1.Text = BaseOfProducts.Instance.ToString();
+        }
+
+        private void FindProductButton_Click(object sender, EventArgs e)
+        {
+            string searchProduct = findBox.Text;
+            Product product = BaseOfProducts.Instance.FindByNameProduct(searchProduct);
+            if (product != null)
+            {
+                ResultOfFindProduct.Text = product.getCode();
+            }
+            else
+            {
+                ResultOfFindProduct.Text = "Brak produktu o takiej nazwie";
+            }
+        }
+
+        private void findBox_Click(object sender, EventArgs e)
+        {
+            findBox.Text = "";
         }
     }
 }

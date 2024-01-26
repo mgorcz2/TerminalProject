@@ -29,54 +29,57 @@
         private void InitializeComponent()
         {
             listView1 = new ListView();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            FindProductButton = new Button();
+            ResultOfFindProduct = new TextBox();
+            findBox = new TextBox();
             SuspendLayout();
             // 
             // listView1
             // 
-            listView1.Location = new Point(36, 28);
+            listView1.Location = new Point(12, 12);
             listView1.Name = "listView1";
-            listView1.Size = new Size(588, 463);
+            listView1.Size = new Size(302, 568);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // FindProductButton
             // 
-            button1.Location = new Point(549, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            FindProductButton.Location = new Point(340, 41);
+            FindProductButton.Name = "FindProductButton";
+            FindProductButton.Size = new Size(220, 44);
+            FindProductButton.TabIndex = 1;
+            FindProductButton.Text = "SZUKAJ PRODUKTU";
+            FindProductButton.UseVisualStyleBackColor = true;
+            FindProductButton.Click += FindProductButton_Click;
             // 
-            // button2
+            // ResultOfFindProduct
             // 
-            button2.Location = new Point(571, 90);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            ResultOfFindProduct.Location = new Point(566, 24);
+            ResultOfFindProduct.Multiline = true;
+            ResultOfFindProduct.Name = "ResultOfFindProduct";
+            ResultOfFindProduct.Size = new Size(87, 44);
+            ResultOfFindProduct.TabIndex = 3;
             // 
-            // textBox1
+            // findBox
             // 
-            textBox1.Location = new Point(592, 468);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            findBox.Location = new Point(340, 12);
+            findBox.Name = "findBox";
+            findBox.Size = new Size(220, 23);
+            findBox.TabIndex = 4;
+            findBox.Text = "nazwa produktu";
+            findBox.TextAlign = HorizontalAlignment.Center;
+            findBox.Click += findBox_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(704, 528);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1023, 623);
+            Controls.Add(findBox);
+            Controls.Add(ResultOfFindProduct);
+            Controls.Add(FindProductButton);
             Controls.Add(listView1);
             Name = "Form2";
             Text = "Form2";
@@ -88,8 +91,8 @@
         #endregion
 
         private ListView listView1;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
+        private Button FindProductButton;
+        private TextBox ResultOfFindProduct;
+        private TextBox findBox;
     }
 }
