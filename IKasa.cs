@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KasaFiskalna.Produkt;
 
 namespace KasaFiskalna
 {
     internal interface IKasa
     {
-        public void Start();
+        public void StartTransaction();
         public void End();
 
-        public void addItem();
+        public Product addItem(String code);
     }
 }

@@ -22,16 +22,16 @@ namespace KasaFiskalna
         {
             add.Enabled = false;
             add.BackColor = Color.Gray;
-            rachunek.Enabled = false;
-            rachunek.BackColor = Color.Gray;
+            delLastFromReceipt.Enabled = false;
+            delLastFromReceipt.BackColor = Color.Gray;
         }
         private void EnableButtons()
         {
             // W³¹cz przyciski
             add.Enabled = true;
             add.BackColor = Color.Green;
-            rachunek.Enabled = true;
-            rachunek.BackColor = Color.LightCoral;
+            delLastFromReceipt.Enabled = true;
+            delLastFromReceipt.BackColor = Color.LightCoral;
         }
 
         private void EnableDisplay(bool on)
@@ -50,16 +50,16 @@ namespace KasaFiskalna
         {
             EnableButtons();
             t1 = new Transaction();
-            t1.Start();
-            textBox2.Text = "";
+            t1.StartTransaction();
+            ReceiptBox.Text = "";
             display.Text = "";
             EnableDisplay(true);
         }
 
-        public void rachunek_Click(object sender, EventArgs e)
+        public void delLastFromReceiptButton_Click(object sender, EventArgs e)
         {
             t1.GetReceipt().RemoveLast();
-            textBox2.Text = GetUpdatedText();
+            ReceiptBox.Text = GetUpdatedText();
         }
         private string GetUpdatedText()
         {
@@ -70,7 +70,7 @@ namespace KasaFiskalna
         public void add_Click(object sender, EventArgs e)
         {
             string productCode = display.Text;
-            Product foundProduct = t1.GetBaseOfProducts().Find(productCode);
+            Product foundProduct = t1.addItem(productCode);
             if (foundProduct != null)
             {
                 t1.GetReceipt().AddProduct(foundProduct);
@@ -83,12 +83,11 @@ namespace KasaFiskalna
                 adderror.Text = "Nie znaleziono produktu o takim kodzie";
             }
 
-            textBox2.Text = t1.GetReceipt().ToString();
+            ReceiptBox.Text = t1.GetReceipt().ToString();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Base_Click(object sender, EventArgs e)

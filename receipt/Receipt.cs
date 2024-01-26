@@ -23,22 +23,32 @@ namespace KasaFiskalna.receipt
         public void AddProduct(Product item)
         {
             items.Add(item);
-            totalPrice = totalPrice + item.getPrice();
+            totalPrice += item.getPrice();
         }
         public void RemoveLast()
         {
+            
             if (items.Count > 0)
             {
                 items.RemoveAt(items.Count - 1);
+                totalPrice -= items.ElementAt(items.Count - 1).getPrice();
             }
+        }
+
+        public double getTotalPrice()
+        {
+            return totalPrice;
         }
         public override string ToString()
         {
             StringBuilder s1 = new StringBuilder();
+            s1.Append(date+Environment.NewLine);
             foreach (var el in items)
             {
-                s1.Append(el.ToString() + Environment.NewLine);
+                s1.Append(el.getName() + ":    " + el.getPrice() + "zł" + Environment.NewLine);
             }
+
+            s1.Append("           Łączna kwota:"+this.getTotalPrice());
             return s1.ToString();
         }
     }

@@ -39,8 +39,8 @@
             button4 = new Button();
             button1 = new Button();
             button3 = new Button();
-            rachunek = new Button();
-            textBox2 = new TextBox();
+            delLastFromReceipt = new Button();
+            ReceiptBox = new TextBox();
             display = new TextBox();
             add = new Button();
             START = new Button();
@@ -184,25 +184,26 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // rachunek
+            // delLastFromReceipt
             // 
-            rachunek.BackColor = Color.RosyBrown;
-            rachunek.Location = new Point(517, 477);
-            rachunek.Name = "rachunek";
-            rachunek.Size = new Size(126, 27);
-            rachunek.TabIndex = 14;
-            rachunek.Text = "usuń ostatni";
-            rachunek.UseVisualStyleBackColor = false;
-            rachunek.Click += rachunek_Click;
+            delLastFromReceipt.BackColor = Color.RosyBrown;
+            delLastFromReceipt.Location = new Point(517, 477);
+            delLastFromReceipt.Name = "delLastFromReceipt";
+            delLastFromReceipt.Size = new Size(126, 27);
+            delLastFromReceipt.TabIndex = 14;
+            delLastFromReceipt.Text = "usuń ostatni";
+            delLastFromReceipt.UseVisualStyleBackColor = false;
+            delLastFromReceipt.Click += delLastFromReceiptButton_Click;
             // 
-            // textBox2
+            // ReceiptBox
             // 
-            textBox2.Location = new Point(517, 80);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(227, 391);
-            textBox2.TabIndex = 16;
+            ReceiptBox.Enabled = false;
+            ReceiptBox.Location = new Point(517, 80);
+            ReceiptBox.Multiline = true;
+            ReceiptBox.Name = "ReceiptBox";
+            ReceiptBox.ScrollBars = ScrollBars.Vertical;
+            ReceiptBox.Size = new Size(227, 391);
+            ReceiptBox.TabIndex = 16;
             // 
             // display
             // 
@@ -288,8 +289,8 @@
             panel1.Controls.Add(START);
             panel1.Controls.Add(add);
             panel1.Controls.Add(display);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(rachunek);
+            panel1.Controls.Add(ReceiptBox);
+            panel1.Controls.Add(delLastFromReceipt);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button4);
@@ -349,8 +350,8 @@
         private Button button4;
         private Button button1;
         private Button button3;
-        private Button rachunek;
-        private TextBox textBox2;
+        private Button delLastFromReceipt;
+        private TextBox ReceiptBox;
         private Button add;
         private Button START;
         private Button button10;

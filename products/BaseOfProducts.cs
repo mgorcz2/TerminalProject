@@ -11,6 +11,8 @@ namespace KasaFiskalna.Produkt
     internal class BaseOfProducts
     {
         private HashSet<Product> products;
+        private String shopName = "";
+        private String shopAddress = "";
 
         public BaseOfProducts()                                                             //possibly values from database
         {
@@ -24,6 +26,15 @@ namespace KasaFiskalna.Produkt
             products.Add(new Product(product.getCode(), product.getName(), product.getPrice()));
         }
 
+        public void SetShopName(string shopName)
+        {
+            this.shopName = shopName == null ? "" : shopName;
+        }
+
+        public void SetShopAddress(string shopAddress)
+        {
+            this.shopAddress = shopAddress == null ? "" : shopAddress;
+        }
         public void RemoveProduct(string code)
         {
             products.RemoveWhere(p=>p.getCode().Equals(code));

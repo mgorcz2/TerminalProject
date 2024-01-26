@@ -39,7 +39,7 @@ namespace KasaFiskalna.Produkt
 
         public override string ToString()
         {
-            return code + " " + name + " " + price.ToString();
+            return code + " " + name + " " + price;
         }
     }
 }
