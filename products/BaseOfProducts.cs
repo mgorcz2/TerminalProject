@@ -36,6 +36,11 @@ namespace KasaFiskalna.Produkt
             products.Add(new Product("0004", "Kubek", 1));
             products.Add(new Product("5025", "Ławka", 3.0));
         }
+
+        public HashSet<Product> GetProducts()
+        {
+            return products;
+        }
         public void AddProduct(Product product)
         {
             products.Add(new Product(product.getCode(), product.getName(), product.getPrice()));

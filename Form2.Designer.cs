@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            listView1 = new ListView();
             button1 = new Button();
-            textBox1 = new TextBox();
             button2 = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
+            // 
+            // listView1
+            // 
+            listView1.Location = new Point(36, 28);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(588, 463);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button1
             // 
-            button1.Location = new Point(466, 203);
+            button1.Location = new Point(549, 28);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
@@ -43,23 +52,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(204, 117);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 194);
-            textBox1.TabIndex = 2;
-            // 
             // button2
             // 
-            button2.Location = new Point(429, 308);
+            button2.Location = new Point(571, 90);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
-            button2.TabIndex = 3;
+            button2.TabIndex = 2;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(592, 468);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 3;
             // 
             // Form2
             // 
@@ -67,9 +74,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(704, 528);
-            Controls.Add(button2);
             Controls.Add(textBox1);
+            Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(listView1);
             Name = "Form2";
             Text = "Form2";
             Load += Form2_Load;
@@ -78,8 +86,10 @@
         }
 
         #endregion
+
+        private ListView listView1;
         private Button button1;
-        private TextBox textBox1;
         private Button button2;
+        private TextBox textBox1;
     }
 }
