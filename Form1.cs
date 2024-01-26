@@ -9,10 +9,14 @@ namespace KasaFiskalna
     public partial class Form1 : Form
     {
         private Transaction t1;
+        public void Form1_Load(object sender, EventArgs e)
+        {
+        }
         public Form1()
         {
             InitializeComponent();
             DisableButtons(); // Wy³¹cz przyciski na starcie
+            EnableDisplay(false);
         }
         private void DisableButtons()
         {
@@ -30,22 +34,28 @@ namespace KasaFiskalna
             rachunek.BackColor = Color.LightCoral;
         }
 
-        private void AddTextToTextBox<T>(T text)
+        private void EnableDisplay(bool on)
         {
-            // Funkcja generyczna, która dodaje przekazany tekst do TextBoxa
-            display.Text += text.ToString();
+            if (on)
+            {
+                display.Enabled = true;
+            }
+            else
+            {
+                display.Enabled = false;
+            }
         }
+
         public void START_Click(object sender, EventArgs e)
         {
             EnableButtons();
             t1 = new Transaction();
             t1.Start();
             textBox2.Text = "";
+            display.Text = "";
+            EnableDisplay(true);
         }
-        public void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
         public void rachunek_Click(object sender, EventArgs e)
         {
             t1.GetReceipt().RemoveLast();
@@ -93,9 +103,70 @@ namespace KasaFiskalna
             s1.Play();
         }
 
+        public void ButtonValueToDisplay(Button button)
+        {
+            if (display.Text.Length < 4)
+            {
+                display.Text += button.Text;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            AddTextToTextBox(button1.Text);
+            ButtonValueToDisplay(button1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button2);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button3);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button4);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button5);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button6);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button7);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button8);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button9);
+        }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            ButtonValueToDisplay(button0);
+        }
+
+        private void buttondel_Click(object sender, EventArgs e)
+        {
+            if (display.Text.Length>0)
+            {
+                display.Text = display.Text.Substring(0, display.Text.Length - 1);
+            }
+            
         }
     }
 }
