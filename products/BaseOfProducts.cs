@@ -17,9 +17,12 @@ namespace KasaFiskalna.Produkt
         public BaseOfProducts()                                                             //possibly values from database
         {
             products=new HashSet<Product>();
-            products.Add(new Product("0001", "Banan/kg", 4.0));
-            products.Add(new Product("0042", "Chleb", 4.25));
-            products.Add(new Product("5024", "Jabłko/kg", 3.0));
+            products.Add(new Product("0001", "Banan", 4.0));
+            products.Add(new Product("0002", "Komoda", 4.25));
+            products.Add(new Product("0002", "12345", 2));
+            products.Add(new Product("0003", "123456789", 3.5));
+            products.Add(new Product("0004", "123", 1));
+            products.Add(new Product("5025", "Jabłko/kg", 3.0));
         }
         public void AddProduct(Product product)
         {

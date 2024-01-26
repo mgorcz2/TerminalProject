@@ -45,7 +45,7 @@
             add = new Button();
             START = new Button();
             button10 = new Button();
-            Base = new Button();
+            BaseButton = new Button();
             emergency = new Button();
             panel1 = new Panel();
             adderror = new TextBox();
@@ -255,15 +255,15 @@
             button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
             // 
-            // Base
+            // BaseButton
             // 
-            Base.Location = new Point(10, 609);
-            Base.Name = "Base";
-            Base.Size = new Size(138, 33);
-            Base.TabIndex = 17;
-            Base.Text = "Baza produktów";
-            Base.UseVisualStyleBackColor = true;
-            Base.Click += Base_Click;
+            BaseButton.Location = new Point(10, 609);
+            BaseButton.Name = "BaseButton";
+            BaseButton.Size = new Size(138, 33);
+            BaseButton.TabIndex = 17;
+            BaseButton.Text = "Baza produktów";
+            BaseButton.UseVisualStyleBackColor = true;
+            BaseButton.Click += Base_Click;
             // 
             // emergency
             // 
@@ -284,7 +284,7 @@
             panel1.BackColor = Color.Silver;
             panel1.Controls.Add(adderror);
             panel1.Controls.Add(emergency);
-            panel1.Controls.Add(Base);
+            panel1.Controls.Add(BaseButton);
             panel1.Controls.Add(button10);
             panel1.Controls.Add(START);
             panel1.Controls.Add(add);
@@ -355,7 +355,7 @@
         private Button add;
         private Button START;
         private Button button10;
-        private Button Base;
+        private Button BaseButton;
         private Button emergency;
         private Panel panel1;
         public TextBox display;

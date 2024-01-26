@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KasaFiskalna")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21cf96d51b927ed4238ba1f4e978c8e4425f18ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87becda172ac877917f6939973642fc2e550f346")]
 [assembly: System.Reflection.AssemblyProductAttribute("KasaFiskalna")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KasaFiskalna")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

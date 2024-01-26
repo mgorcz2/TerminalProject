@@ -30,8 +30,8 @@ namespace KasaFiskalna.receipt
             
             if (items.Count > 0)
             {
-                items.RemoveAt(items.Count - 1);
                 totalPrice -= items.ElementAt(items.Count - 1).getPrice();
+                items.RemoveAt(items.Count - 1);
             }
         }
 
@@ -39,16 +39,26 @@ namespace KasaFiskalna.receipt
         {
             return totalPrice;
         }
+        private int GetStringWidth(string text)
+        {
+            using (Graphics graphics = Graphics.FromImage(new Bitmap(1, 1)))
+            {
+                SizeF size = graphics.MeasureString(text, new Font("Arial", 12));
+                return (int)size.Width;
+            }
+        }
         public override string ToString()
         {
             StringBuilder s1 = new StringBuilder();
             s1.Append(date+Environment.NewLine);
             foreach (var el in items)
             {
-                s1.Append(el.getName() + ":    " + el.getPrice() + "zł" + Environment.NewLine);
+                string itemName = el.getName().PadRight(30-el.getName().Length);
+                string itemPrice = el.getPrice().ToString(format:"C2");
+                s1.AppendLine($"{itemName}{itemPrice}");
             }
 
-            s1.Append("           Łączna kwota:"+this.getTotalPrice());
+            s1.Append("        Łączna kwota do zapłaty: "+this.getTotalPrice()+"zł");
             return s1.ToString();
         }
     }
