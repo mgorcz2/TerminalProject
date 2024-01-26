@@ -10,6 +10,7 @@ namespace KasaFiskalna
     {
         private Transaction t1;
         private readonly BaseOfProducts baseOfProducts;
+        Form2 form2 = new Form2();
         public void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -93,7 +94,6 @@ namespace KasaFiskalna
 
         private void Base_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
             form2.Show();
         }
 

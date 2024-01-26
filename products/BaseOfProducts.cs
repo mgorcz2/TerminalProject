@@ -31,7 +31,7 @@ namespace KasaFiskalna.Produkt
             products = new HashSet<Product>();
             products.Add(new Product("0001", "Banan", 4.0));
             products.Add(new Product("0002", "Komoda", 4.25));
-            products.Add(new Product("0002", "Stół", 2));
+            products.Add(new Product("0002", "Stół", 210.99));
             products.Add(new Product("0003", "Talerz", 3.5));
             products.Add(new Product("0004", "Kubek", 1));
             products.Add(new Product("5025", "Ławka", 3.0));
@@ -63,6 +63,17 @@ namespace KasaFiskalna.Produkt
         public Product FindByCodeProduct(string code)
         {
             return products.FirstOrDefault(p => p.getCode().Equals(code));
+        }
+
+        public string RandomCode()
+        {
+            Random random = new Random();
+            int randomCode = random.Next(1000,10000);
+            while (FindByCodeProduct(randomCode.ToString()) != null)
+            {
+                randomCode = random.Next(1000, 10000);
+            }
+            return randomCode.ToString();
         }
 
         public Product FindByNameProduct(string name)

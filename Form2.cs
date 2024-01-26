@@ -1,4 +1,5 @@
-﻿using KasaFiskalna.Produkt;
+﻿using System.Security.Cryptography;
+using KasaFiskalna.Produkt;
 
 namespace KasaFiskalna
 {
@@ -7,14 +8,11 @@ namespace KasaFiskalna
         internal Form2()
         {
             InitializeComponent();
+            listViewRefresh();
+            
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void listViewRefresh()
         {
             listView1.Clear();
             listView1.Columns.Add("Code", 100);
@@ -27,6 +25,16 @@ namespace KasaFiskalna
                 var listViewItem = new ListViewItem(row);
                 listView1.Items.Add(listViewItem);
             }
+            listView1.Scrollable = true;
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void FindProductButton_Click(object sender, EventArgs e)
@@ -39,13 +47,35 @@ namespace KasaFiskalna
             }
             else
             {
-                ResultOfFindProduct.Text = "Brak produktu o takiej nazwie";
+                ResultOfFindProduct.Text = "BRAK";
             }
         }
 
         private void findBox_Click(object sender, EventArgs e)
         {
             findBox.Text = "";
+        }
+
+        private void AddProductToBaseButton_Click(object sender, EventArgs e)
+        {
+            double price;
+            if (Double.TryParse(PriceBox.Text, out price))
+            {
+            }
+            else
+            {
+                MessageBox.Show("Nieprawidłowy format ceny");
+            }
+            Product addedProduct = new Product(BaseOfProducts.Instance.RandomCode(), NameBox.Text, price);
+            if (BaseOfProducts.Instance.FindByNameProduct(addedProduct.getName()) == null)
+            {
+                BaseOfProducts.Instance.AddProduct(addedProduct);
+                listViewRefresh();
+            }
+            else
+            {
+                MessageBox.Show("Produkt o takiej nazwie istnieje");
+            }
         }
     }
 }
