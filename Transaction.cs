@@ -11,19 +11,14 @@ namespace KasaFiskalna
     internal class Transaction : IKasa
     {
         private Receipt receipt;
-        private BaseOfProducts baseofproducts;
         public Receipt GetReceipt()
         {
             return receipt;
         }
 
-        public BaseOfProducts GetBaseOfProducts()
+        public Product addItem(String productCode, BaseOfProducts baseof)
         {
-            return baseofproducts;
-        }
-        public Product addItem(String productCode)
-        {
-           return this.GetBaseOfProducts().Find(productCode);
+           return baseof.Find(productCode);
         }
 
         public void End()
@@ -33,7 +28,6 @@ namespace KasaFiskalna
         public void StartTransaction()
         {
             receipt = new Receipt();
-            baseofproducts= new BaseOfProducts();
         }
     }
 }

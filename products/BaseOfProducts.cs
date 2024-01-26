@@ -8,21 +8,33 @@ using System.Threading.Tasks;
 
 namespace KasaFiskalna.Produkt
 {
-    internal class BaseOfProducts
+    internal class BaseOfProducts                           //it should be data from database, but I use instance to test the program
     {
+        private static BaseOfProducts instance;
         private HashSet<Product> products;
-        private String shopName = "";
-        private String shopAddress = "";
+        private String shopName;
+        private String shopAddress;
 
-        public BaseOfProducts()                                                             //possibly values from database
+        public static BaseOfProducts Instance
         {
-            products=new HashSet<Product>();
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new BaseOfProducts();
+                }
+                return instance;
+            }
+        }
+        public BaseOfProducts()
+        {
+            products = new HashSet<Product>();
             products.Add(new Product("0001", "Banan", 4.0));
             products.Add(new Product("0002", "Komoda", 4.25));
-            products.Add(new Product("0002", "12345", 2));
-            products.Add(new Product("0003", "123456789", 3.5));
-            products.Add(new Product("0004", "123", 1));
-            products.Add(new Product("5025", "Jabłko/kg", 3.0));
+            products.Add(new Product("0002", "Stół", 2));
+            products.Add(new Product("0003", "Talerz", 3.5));
+            products.Add(new Product("0004", "Kubek", 1));
+            products.Add(new Product("5025", "Ławka", 3.0));
         }
         public void AddProduct(Product product)
         {

@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
             button1 = new Button();
+            textBox1 = new TextBox();
+            button2 = new Button();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(127, 68);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(197, 321);
-            textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(498, 105);
+            button1.Location = new Point(466, 203);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
@@ -50,13 +43,33 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(204, 117);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 194);
+            textBox1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(429, 308);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 3;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(704, 528);
-            Controls.Add(button1);
+            Controls.Add(button2);
             Controls.Add(textBox1);
+            Controls.Add(button1);
             Name = "Form2";
             Text = "Form2";
             Load += Form2_Load;
@@ -65,8 +78,8 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private Button button1;
+        private TextBox textBox1;
+        private Button button2;
     }
 }

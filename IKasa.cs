@@ -12,6 +12,6 @@ namespace KasaFiskalna
         public void StartTransaction();
         public void End();
 
-        public Product addItem(String code);
+        public Product addItem(String code, BaseOfProducts baseof);
     }
 }

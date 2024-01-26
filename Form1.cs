@@ -9,6 +9,7 @@ namespace KasaFiskalna
     public partial class Form1 : Form
     {
         private Transaction t1;
+        private readonly BaseOfProducts baseOfProducts;
         public void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -49,11 +50,11 @@ namespace KasaFiskalna
         public void START_Click(object sender, EventArgs e)
         {
             EnableButtons();
-            t1 = new Transaction();
-            t1.StartTransaction();
             ReceiptBox.Text = "";
             display.Text = "";
             EnableDisplay(true);
+            t1 = new Transaction();
+            t1.StartTransaction();
         }
 
         public void delLastFromReceiptButton_Click(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace KasaFiskalna
         public void add_Click(object sender, EventArgs e)
         {
             string productCode = display.Text;
-            Product foundProduct = t1.addItem(productCode);
+            Product foundProduct = t1.addItem(productCode,BaseOfProducts.Instance);
             if (foundProduct != null)
             {
                 t1.GetReceipt().AddProduct(foundProduct);
