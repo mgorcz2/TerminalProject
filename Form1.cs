@@ -51,7 +51,6 @@ namespace KasaFiskalna
         public void START_Click(object sender, EventArgs e)
         {
             EnableButtons();
-            ReceiptBox.Text = "";
             display.Text = "";
             EnableDisplay(true);
             t1 = new Transaction();
@@ -61,18 +60,26 @@ namespace KasaFiskalna
         public void delLastFromReceiptButton_Click(object sender, EventArgs e)
         {
             t1.GetReceipt().RemoveLast();
-            ReceiptBox.Text = GetUpdatedText();
+            ReceiptBoxRefresh();
         }
-        private string GetUpdatedText()
+        private void ReceiptBoxRefresh()
         {
-            string newText = string.Join(Environment.NewLine, t1.GetReceipt());
-
-            return newText;
+            ReceiptBox.Clear();
+            ReceiptBox.Columns.Add("Nazwa produktu", 100);
+            ReceiptBox.Columns.Add("Cena", 100);
+            ReceiptBox.View = View.Details;
+            foreach (var el in t1.GetReceipt().getItems())
+            {
+                ListViewItem item = new ListViewItem(el.getName());
+                item.SubItems.Add(el.getPrice().ToString("C2"));
+                ReceiptBox.Items.Add(item);
+            }
+            ReceiptBox.EnsureVisible(ReceiptBox.Items.Count - 1);
         }
         public void add_Click(object sender, EventArgs e)
         {
             string productCode = display.Text;
-            Product foundProduct = t1.addItem(productCode,BaseOfProducts.Instance);
+            Product foundProduct = t1.addItem(productCode, BaseOfProducts.Instance);
             if (foundProduct != null)
             {
                 t1.GetReceipt().AddProduct(foundProduct);
@@ -85,7 +92,8 @@ namespace KasaFiskalna
                 adderror.Text = "Nie znaleziono produktu o takim kodzie";
             }
 
-            ReceiptBox.Text = t1.GetReceipt().ToString();
+            ReceiptBoxRefresh();
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -162,11 +170,17 @@ namespace KasaFiskalna
 
         private void buttondel_Click(object sender, EventArgs e)
         {
-            if (display.Text.Length>0)
+            if (display.Text.Length > 0)
             {
                 display.Text = display.Text.Substring(0, display.Text.Length - 1);
             }
-            
+
+        }
+
+        private void receiptBoxColumnChanger(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = ReceiptBox.Columns[e.ColumnIndex].Width;
         }
     }
 }

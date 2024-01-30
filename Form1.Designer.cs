@@ -40,7 +40,6 @@
             button1 = new Button();
             button3 = new Button();
             delLastFromReceipt = new Button();
-            ReceiptBox = new TextBox();
             display = new TextBox();
             add = new Button();
             START = new Button();
@@ -49,6 +48,9 @@
             emergency = new Button();
             adderror = new TextBox();
             panel1 = new Panel();
+            ReceiptBox = new ListView();
+            nameofproduct = new ColumnHeader();
+            priceofproduct = new ColumnHeader();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -208,17 +210,6 @@
             delLastFromReceipt.UseVisualStyleBackColor = false;
             delLastFromReceipt.Click += delLastFromReceiptButton_Click;
             // 
-            // ReceiptBox
-            // 
-            ReceiptBox.Anchor = AnchorStyles.None;
-            ReceiptBox.Enabled = false;
-            ReceiptBox.Location = new Point(538, 80);
-            ReceiptBox.Multiline = true;
-            ReceiptBox.Name = "ReceiptBox";
-            ReceiptBox.ScrollBars = ScrollBars.Vertical;
-            ReceiptBox.Size = new Size(227, 391);
-            ReceiptBox.TabIndex = 16;
-            // 
             // display
             // 
             display.Anchor = AnchorStyles.None;
@@ -317,6 +308,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Gray;
+            panel1.Controls.Add(ReceiptBox);
             panel1.Controls.Add(adderror);
             panel1.Controls.Add(emergency);
             panel1.Controls.Add(BaseButton);
@@ -324,7 +316,6 @@
             panel1.Controls.Add(START);
             panel1.Controls.Add(add);
             panel1.Controls.Add(display);
-            panel1.Controls.Add(ReceiptBox);
             panel1.Controls.Add(delLastFromReceipt);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button1);
@@ -341,6 +332,30 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(840, 644);
             panel1.TabIndex = 18;
+            // 
+            // ReceiptBox
+            // 
+            ReceiptBox.Anchor = AnchorStyles.None;
+            ReceiptBox.Columns.AddRange(new ColumnHeader[] { nameofproduct, priceofproduct });
+            ReceiptBox.FullRowSelect = true;
+            ReceiptBox.GridLines = true;
+            ReceiptBox.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            ReceiptBox.Location = new Point(538, 86);
+            ReceiptBox.Name = "ReceiptBox";
+            ReceiptBox.Size = new Size(251, 373);
+            ReceiptBox.TabIndex = 20;
+            ReceiptBox.UseCompatibleStateImageBehavior = false;
+            ReceiptBox.ColumnWidthChanging += receiptBoxColumnChanger;
+            // 
+            // nameofproduct
+            // 
+            nameofproduct.Text = "Nazwa produktu";
+            nameofproduct.Width = 30;
+            // 
+            // priceofproduct
+            // 
+            priceofproduct.Text = "Cena produktu";
+            priceofproduct.Width = 30;
             // 
             // Form1
             // 
@@ -371,7 +386,6 @@
         private Button button1;
         private Button button3;
         private Button delLastFromReceipt;
-        private TextBox ReceiptBox;
         public TextBox display;
         private Button add;
         private Button START;
@@ -380,5 +394,8 @@
         private Button emergency;
         private TextBox adderror;
         private Panel panel1;
+        private ListView ReceiptBox;
+        private ColumnHeader nameofproduct;
+        private ColumnHeader priceofproduct;
     }
 }

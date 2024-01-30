@@ -20,6 +20,10 @@ namespace KasaFiskalna.receipt
             date = DateTime.Now;
         }
 
+        public List<Product> getItems()
+        {
+            return items;
+        }
         public void AddProduct(Product item)
         {
             items.Add(item);
@@ -38,6 +42,11 @@ namespace KasaFiskalna.receipt
         public double getTotalPrice()
         {
             return totalPrice;
+        }
+
+        public DateTime getDate()
+        {
+            return date;
         }
         private int GetStringWidth(string text)
         {
