@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 using KasaFiskalna.Produkt;
 
@@ -40,6 +41,7 @@ namespace KasaFiskalna.receipt
                 if (productToRemove != null)
                 {
                     items.Remove(productToRemove);
+                    totalPrice-=productToRemove.getPrice();
                 }
             }
         }

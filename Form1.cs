@@ -69,6 +69,7 @@ namespace KasaFiskalna
                 t1.GetReceipt().RemoveSelectedProducts(ReceiptBox);
             }
             ReceiptBoxRefresh();
+            RefreshTotalLabel();
         }
         private void ReceiptBoxRefresh()
         {
@@ -82,7 +83,6 @@ namespace KasaFiskalna
                 item.SubItems.Add(el.getPrice().ToString("C2"));
                 ReceiptBox.Items.Add(item);
             }
-
             if (ReceiptBox.Items.Count > 1)
             {
                 ReceiptBox.EnsureVisible(ReceiptBox.Items.Count - 1);
@@ -98,6 +98,7 @@ namespace KasaFiskalna
                 adderror.ForeColor = Color.Green;
                 adderror.Text = "Dodano produkt do rachunku";
                 ReceiptBoxRefresh();
+                RefreshTotalLabel();
             }
             else
             {
@@ -106,8 +107,13 @@ namespace KasaFiskalna
             }
         }
 
+        private void RefreshTotalLabel()
+        {
+            TotalPriceLabel.Text = "£¹czna kwota: " + t1.GetReceipt().getTotalPrice()+"z³";
+        }
         private void PaymentButtonClick(object sender, EventArgs e)
         {
+            t1.SaveAndPrintReceipt(ReceiptBox);
         }
 
         private void Base_Click(object sender, EventArgs e)
@@ -126,7 +132,6 @@ namespace KasaFiskalna
             {
                 display.Text = display.Text.Substring(0, display.Text.Length - 1);
             }
-            
         }
         private void receiptBoxColumnChanger(object sender, ColumnWidthChangingEventArgs e)
         {

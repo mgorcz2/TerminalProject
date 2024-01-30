@@ -51,6 +51,7 @@
             ReceiptBox = new ListView();
             nameofproduct = new ColumnHeader();
             priceofproduct = new ColumnHeader();
+            TotalPriceLabel = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -204,7 +205,7 @@
             delChosenFromReceipt.BackColor = Color.IndianRed;
             delChosenFromReceipt.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
             delChosenFromReceipt.ForeColor = Color.White;
-            delChosenFromReceipt.Location = new Point(538, 477);
+            delChosenFromReceipt.Location = new Point(538, 468);
             delChosenFromReceipt.Name = "delChosenFromReceipt";
             delChosenFromReceipt.Size = new Size(126, 27);
             delChosenFromReceipt.TabIndex = 14;
@@ -263,9 +264,9 @@
             PaymentButton.Anchor = AnchorStyles.None;
             PaymentButton.BackColor = Color.FromArgb(255, 255, 128);
             PaymentButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            PaymentButton.Location = new Point(670, 474);
+            PaymentButton.Location = new Point(670, 516);
             PaymentButton.Name = "PaymentButton";
-            PaymentButton.Size = new Size(95, 79);
+            PaymentButton.Size = new Size(119, 79);
             PaymentButton.TabIndex = 15;
             PaymentButton.Text = "PŁATNOŚĆ";
             PaymentButton.UseVisualStyleBackColor = false;
@@ -301,6 +302,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Gray;
+            panel1.Controls.Add(TotalPriceLabel);
             panel1.Controls.Add(adderror);
             panel1.Controls.Add(ReceiptBox);
             panel1.Controls.Add(emergency);
@@ -359,6 +361,18 @@
             priceofproduct.Text = "Cena produktu";
             priceofproduct.Width = 30;
             // 
+            // TotalPriceLabel
+            // 
+            TotalPriceLabel.Anchor = AnchorStyles.None;
+            TotalPriceLabel.BackColor = Color.Silver;
+            TotalPriceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            TotalPriceLabel.Location = new Point(670, 468);
+            TotalPriceLabel.Name = "TotalPriceLabel";
+            TotalPriceLabel.Size = new Size(119, 45);
+            TotalPriceLabel.TabIndex = 22;
+            TotalPriceLabel.Text = "Łącznie:";
+            TotalPriceLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -399,5 +413,6 @@
         private ColumnHeader nameofproduct;
         private ColumnHeader priceofproduct;
         private Label adderror;
+        private Label TotalPriceLabel;
     }
 }
