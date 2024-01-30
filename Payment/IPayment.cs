@@ -8,7 +8,6 @@ namespace KasaFiskalna.Payment
 {
     internal interface IPayment
     {
-        public void processPayment(double amount);
-        public Boolean isPaymentSuccessful();
+        public Boolean isPaymentSuccessful(Transaction transaction);
     }
 }

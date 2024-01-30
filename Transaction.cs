@@ -11,7 +11,7 @@ namespace KasaFiskalna
     internal class Transaction : IKasa
     {
         private Receipt receipt;
-        private List<Transaction> historyTransactions;    //database
+        private List<Transaction> historyTransactions = new List<Transaction>();    //database
         public Receipt GetReceipt()
         {
             return receipt;

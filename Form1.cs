@@ -1,8 +1,8 @@
 
 
-using System.Media;
-using System.Runtime.CompilerServices;
 using KasaFiskalna.Produkt;
+using System.Media;
+using KasaFiskalna.Payment;
 
 namespace KasaFiskalna
 {
@@ -28,8 +28,8 @@ namespace KasaFiskalna
             delChosenFromReceipt.BackColor = Color.Gray;
             PaymentButton.Enabled = false;
             PaymentButton.BackColor = Color.Gray;
-            CashPaymentCheckBox.Enabled= false;
-            TerminaPaymentCheckBox.Enabled= false;
+            CashPaymentCheckBox.Enabled = false;
+            TerminaPaymentCheckBox.Enabled = false;
         }
         private void EnableButtons()
         {
@@ -117,15 +117,35 @@ namespace KasaFiskalna
         }
         private void PaymentButtonClick(object sender, EventArgs e)
         {
-            t1.End();
-            t1.SaveAndPrintReceipt(ReceiptBox);
+            if (CashPaymentCheckBox.Checked && !TerminaPaymentCheckBox.Checked)
+            {
+                CashPayment cashPayment = new CashPayment();
+                if(cashPayment.isPaymentSuccessful(t1))
+                {
+                    t1.SaveAndPrintReceipt(ReceiptBox);
+                    t1.End();
+                }
+            }
+            else if (!CashPaymentCheckBox.Checked && TerminaPaymentCheckBox.Checked)
+            {
+                TerminalPayment terminalPayment = new TerminalPayment();
+                if (terminalPayment.isPaymentSuccessful(t1))
+                {
+                    t1.SaveAndPrintReceipt(ReceiptBox);
+                    t1.End();
+                }
+            }
+            else
+            {
+                CashPaymentCheckBox.Checked= false;
+                TerminaPaymentCheckBox.Checked = false;
+                MessageBox.Show("Wybierz jedn¹ opcje p³atnoœci");
+            }
         }
-
         private void Base_Click(object sender, EventArgs e)
         {
             form2.Show();
         }
-
         private void emergency_Click(object sender, EventArgs e)
         {
             SoundPlayer s1 = new SoundPlayer("Emergency.wav");
