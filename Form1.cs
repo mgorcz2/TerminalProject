@@ -28,6 +28,8 @@ namespace KasaFiskalna
             delChosenFromReceipt.BackColor = Color.Gray;
             PaymentButton.Enabled = false;
             PaymentButton.BackColor = Color.Gray;
+            CashPaymentCheckBox.Enabled= false;
+            TerminaPaymentCheckBox.Enabled= false;
         }
         private void EnableButtons()
         {
@@ -38,6 +40,8 @@ namespace KasaFiskalna
             delChosenFromReceipt.BackColor = Color.OrangeRed;
             PaymentButton.Enabled = true;
             PaymentButton.BackColor = Color.DarkOrange;
+            CashPaymentCheckBox.Enabled = true;
+            TerminaPaymentCheckBox.Enabled = true;
         }
 
         private void EnableDisplay(bool on)
@@ -109,10 +113,11 @@ namespace KasaFiskalna
 
         private void RefreshTotalLabel()
         {
-            TotalPriceLabel.Text = "£¹czna kwota: " + t1.GetReceipt().getTotalPrice()+"z³";
+            TotalPriceLabel.Text = "£¹czna kwota: " + t1.GetReceipt().getTotalPrice().ToString("C2");
         }
         private void PaymentButtonClick(object sender, EventArgs e)
         {
+            t1.End();
             t1.SaveAndPrintReceipt(ReceiptBox);
         }
 

@@ -47,11 +47,13 @@
             BaseButton = new Button();
             emergency = new Button();
             panel1 = new Panel();
+            TerminaPaymentCheckBox = new CheckBox();
+            CashPaymentCheckBox = new CheckBox();
+            TotalPriceLabel = new Label();
             adderror = new Label();
             ReceiptBox = new ListView();
             nameofproduct = new ColumnHeader();
             priceofproduct = new ColumnHeader();
-            TotalPriceLabel = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -302,6 +304,8 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Gray;
+            panel1.Controls.Add(TerminaPaymentCheckBox);
+            panel1.Controls.Add(CashPaymentCheckBox);
             panel1.Controls.Add(TotalPriceLabel);
             panel1.Controls.Add(adderror);
             panel1.Controls.Add(ReceiptBox);
@@ -327,6 +331,46 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(840, 644);
             panel1.TabIndex = 18;
+            // 
+            // TerminaPaymentCheckBox
+            // 
+            TerminaPaymentCheckBox.AutoSize = true;
+            TerminaPaymentCheckBox.BackColor = Color.LightYellow;
+            TerminaPaymentCheckBox.CheckAlign = ContentAlignment.MiddleRight;
+            TerminaPaymentCheckBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            TerminaPaymentCheckBox.ForeColor = Color.FromArgb(255, 128, 0);
+            TerminaPaymentCheckBox.Location = new Point(560, 557);
+            TerminaPaymentCheckBox.Name = "TerminaPaymentCheckBox";
+            TerminaPaymentCheckBox.Size = new Size(109, 25);
+            TerminaPaymentCheckBox.TabIndex = 24;
+            TerminaPaymentCheckBox.Text = "TERMINAL";
+            TerminaPaymentCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // CashPaymentCheckBox
+            // 
+            CashPaymentCheckBox.Anchor = AnchorStyles.None;
+            CashPaymentCheckBox.AutoSize = true;
+            CashPaymentCheckBox.BackColor = Color.LightYellow;
+            CashPaymentCheckBox.CheckAlign = ContentAlignment.MiddleRight;
+            CashPaymentCheckBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            CashPaymentCheckBox.ForeColor = Color.Green;
+            CashPaymentCheckBox.Location = new Point(561, 526);
+            CashPaymentCheckBox.Name = "CashPaymentCheckBox";
+            CashPaymentCheckBox.Size = new Size(108, 25);
+            CashPaymentCheckBox.TabIndex = 23;
+            CashPaymentCheckBox.Text = "GOTÓWKA";
+            CashPaymentCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // TotalPriceLabel
+            // 
+            TotalPriceLabel.Anchor = AnchorStyles.None;
+            TotalPriceLabel.BackColor = Color.Silver;
+            TotalPriceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            TotalPriceLabel.Location = new Point(670, 468);
+            TotalPriceLabel.Name = "TotalPriceLabel";
+            TotalPriceLabel.Size = new Size(119, 45);
+            TotalPriceLabel.TabIndex = 22;
+            TotalPriceLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // adderror
             // 
@@ -360,18 +404,6 @@
             // 
             priceofproduct.Text = "Cena produktu";
             priceofproduct.Width = 30;
-            // 
-            // TotalPriceLabel
-            // 
-            TotalPriceLabel.Anchor = AnchorStyles.None;
-            TotalPriceLabel.BackColor = Color.Silver;
-            TotalPriceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            TotalPriceLabel.Location = new Point(670, 468);
-            TotalPriceLabel.Name = "TotalPriceLabel";
-            TotalPriceLabel.Size = new Size(119, 45);
-            TotalPriceLabel.TabIndex = 22;
-            TotalPriceLabel.Text = "Łącznie:";
-            TotalPriceLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -414,5 +446,7 @@
         private ColumnHeader priceofproduct;
         private Label adderror;
         private Label TotalPriceLabel;
+        private CheckBox TerminaPaymentCheckBox;
+        private CheckBox CashPaymentCheckBox;
     }
 }
