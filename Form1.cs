@@ -29,7 +29,9 @@ namespace KasaFiskalna
             PaymentButton.Enabled = false;
             PaymentButton.BackColor = Color.Gray;
             CashPaymentCheckBox.Enabled = false;
+            CashPaymentCheckBox.BackColor = Color.Gray;
             TerminaPaymentCheckBox.Enabled = false;
+            TerminaPaymentCheckBox.BackColor = Color.Gray;
         }
         private void EnableButtons()
         {
@@ -41,7 +43,9 @@ namespace KasaFiskalna
             PaymentButton.Enabled = true;
             PaymentButton.BackColor = Color.DarkOrange;
             CashPaymentCheckBox.Enabled = true;
+            CashPaymentCheckBox.BackColor= Color.LightYellow;
             TerminaPaymentCheckBox.Enabled = true;
+            TerminaPaymentCheckBox.BackColor = Color.LightYellow;
         }
 
         private void EnableDisplay(bool on)
