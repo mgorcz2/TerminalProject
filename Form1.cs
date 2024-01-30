@@ -10,7 +10,7 @@ namespace KasaFiskalna
     {
         private Transaction t1;
         private readonly BaseOfProducts baseOfProducts;
-        Form2 form2 = new Form2();
+        Form2 form2 = new();
         public void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -77,7 +77,7 @@ namespace KasaFiskalna
             {
                 t1.GetReceipt().AddProduct(foundProduct);
                 adderror.ForeColor = Color.Green;
-                adderror.Text = "Dodano";
+                adderror.Text = "Dodano produkt do rachunku";
             }
             else
             {

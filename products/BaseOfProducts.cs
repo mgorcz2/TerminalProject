@@ -55,11 +55,10 @@ namespace KasaFiskalna.Produkt
         {
             this.shopAddress = shopAddress == null ? "" : shopAddress;
         }
-        public void RemoveProduct(string code)
+        public void RemoveProductByCode(string code)
         {
             products.RemoveWhere(p=>p.getCode().Equals(code));
         }
-
         public Product FindByCodeProduct(string code)
         {
             return products.FirstOrDefault(p => p.getCode().Equals(code));

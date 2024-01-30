@@ -67,14 +67,14 @@
             // 
             // ResultOfFindProduct
             // 
-            ResultOfFindProduct.BackColor = SystemColors.InactiveCaption;
+            ResultOfFindProduct.BackColor = Color.FromArgb(192, 255, 192);
             ResultOfFindProduct.Enabled = false;
             ResultOfFindProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             ResultOfFindProduct.ForeColor = Color.Red;
             ResultOfFindProduct.Location = new Point(566, 23);
             ResultOfFindProduct.Multiline = true;
             ResultOfFindProduct.Name = "ResultOfFindProduct";
-            ResultOfFindProduct.Size = new Size(87, 44);
+            ResultOfFindProduct.Size = new Size(93, 45);
             ResultOfFindProduct.TabIndex = 3;
             ResultOfFindProduct.TextAlign = HorizontalAlignment.Center;
             // 
@@ -112,6 +112,7 @@
             RemoveProductFromBaseButton.TabIndex = 6;
             RemoveProductFromBaseButton.Text = "Usuń produkt z bazy";
             RemoveProductFromBaseButton.UseVisualStyleBackColor = false;
+            RemoveProductFromBaseButton.Click += RemoveProductFromBaseButton_Click;
             // 
             // NameBox
             // 

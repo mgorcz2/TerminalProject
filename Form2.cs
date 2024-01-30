@@ -9,7 +9,7 @@ namespace KasaFiskalna
         {
             InitializeComponent();
             listViewRefresh();
-            
+
         }
 
         public void listViewRefresh()
@@ -32,10 +32,6 @@ namespace KasaFiskalna
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void FindProductButton_Click(object sender, EventArgs e)
         {
@@ -65,6 +61,7 @@ namespace KasaFiskalna
             else
             {
                 MessageBox.Show("Nieprawidłowy format ceny");
+                return;
             }
             Product addedProduct = new Product(BaseOfProducts.Instance.RandomCode(), NameBox.Text, price);
             if (BaseOfProducts.Instance.FindByNameProduct(addedProduct.getName()) == null)
@@ -75,6 +72,22 @@ namespace KasaFiskalna
             else
             {
                 MessageBox.Show("Produkt o takiej nazwie istnieje");
+            }
+        }
+
+        private void RemoveProductFromBaseButton_Click(object sender, EventArgs e)
+        {
+            String searchProduct = findBox.Text;
+            Product product = BaseOfProducts.Instance.FindByNameProduct(searchProduct);
+            if (product != null)
+            {
+                BaseOfProducts.Instance.RemoveProductByCode(product.getCode());
+                listViewRefresh();
+                MessageBox.Show("USUNIETO "+product.getName()+" z bazy produktów.");
+            }
+            else
+            {
+                ResultOfFindProduct.Text = "BRAK";
             }
         }
     }

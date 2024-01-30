@@ -306,11 +306,11 @@
             adderror.Anchor = AnchorStyles.None;
             adderror.BackColor = SystemColors.ActiveBorder;
             adderror.ForeColor = Color.Red;
-            adderror.Location = new Point(476, 3);
+            adderror.Location = new Point(661, 23);
             adderror.Multiline = true;
             adderror.Name = "adderror";
             adderror.ReadOnly = true;
-            adderror.Size = new Size(223, 20);
+            adderror.Size = new Size(104, 50);
             adderror.TabIndex = 19;
             // 
             // panel1
