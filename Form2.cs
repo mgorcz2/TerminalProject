@@ -63,15 +63,23 @@ namespace KasaFiskalna
                 MessageBox.Show("Nieprawidłowy format ceny");
                 return;
             }
-            Product addedProduct = new Product(BaseOfProducts.Instance.RandomCode(), NameBox.Text, price);
-            if (BaseOfProducts.Instance.FindByNameProduct(addedProduct.getName()) == null)
+
+            if (NameBox.TextLength > 0)
             {
-                BaseOfProducts.Instance.AddProduct(addedProduct);
-                listViewRefresh();
+                Product addedProduct = new Product(BaseOfProducts.Instance.RandomCode(), NameBox.Text, price);
+                if (BaseOfProducts.Instance.FindByNameProduct(addedProduct.getName()) == null)
+                {
+                    BaseOfProducts.Instance.AddProduct(addedProduct);
+                    listViewRefresh();
+                }
+                else
+                {
+                    MessageBox.Show("Produkt o takiej nazwie istnieje");
+                }
             }
             else
             {
-                MessageBox.Show("Produkt o takiej nazwie istnieje");
+                MessageBox.Show("Wpisz nazwe produktu");
             }
         }
 
