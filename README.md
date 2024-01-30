@@ -1,2 +1,2 @@
 # KasaFiskalna
- Projekt kasy fiskalnej.
+My first project.
