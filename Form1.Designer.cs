@@ -65,7 +65,7 @@
             button2.TabIndex = 1;
             button2.Text = "2";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += ButtonValueToDisplay;
             // 
             // button5
             // 
@@ -78,7 +78,7 @@
             button5.TabIndex = 4;
             button5.Text = "5";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            button5.Click += ButtonValueToDisplay;
             // 
             // button9
             // 
@@ -91,7 +91,7 @@
             button9.TabIndex = 8;
             button9.Text = "9";
             button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
+            button9.Click += ButtonValueToDisplay;
             // 
             // button6
             // 
@@ -104,7 +104,7 @@
             button6.TabIndex = 5;
             button6.Text = "6";
             button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            button6.Click += ButtonValueToDisplay;
             // 
             // button8
             // 
@@ -117,7 +117,7 @@
             button8.TabIndex = 7;
             button8.Text = "8";
             button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            button8.Click += ButtonValueToDisplay;
             // 
             // buttondel
             // 
@@ -143,7 +143,7 @@
             button0.TabIndex = 9;
             button0.Text = "0";
             button0.UseVisualStyleBackColor = true;
-            button0.Click += button0_Click;
+            button0.Click += ButtonValueToDisplay;
             // 
             // button7
             // 
@@ -156,7 +156,7 @@
             button7.TabIndex = 6;
             button7.Text = "7";
             button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            button7.Click += ButtonValueToDisplay;
             // 
             // button4
             // 
@@ -169,7 +169,7 @@
             button4.TabIndex = 3;
             button4.Text = "4";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            button4.Click += ButtonValueToDisplay;
             // 
             // button1
             // 
@@ -183,7 +183,7 @@
             button1.TabIndex = 0;
             button1.Text = "1";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += ButtonValueToDisplay;
             // 
             // button3
             // 
@@ -196,7 +196,7 @@
             button3.TabIndex = 2;
             button3.Text = "3";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += ButtonValueToDisplay;
             // 
             // delChosenFromReceipt
             // 
