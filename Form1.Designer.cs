@@ -39,11 +39,11 @@
             button4 = new Button();
             button1 = new Button();
             button3 = new Button();
-            delLastFromReceipt = new Button();
+            delChosenFromReceipt = new Button();
             display = new TextBox();
             add = new Button();
             START = new Button();
-            button10 = new Button();
+            PaymentButton = new Button();
             BaseButton = new Button();
             emergency = new Button();
             adderror = new TextBox();
@@ -198,17 +198,17 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // delLastFromReceipt
+            // delChosenFromReceipt
             // 
-            delLastFromReceipt.Anchor = AnchorStyles.None;
-            delLastFromReceipt.BackColor = Color.RosyBrown;
-            delLastFromReceipt.Location = new Point(538, 477);
-            delLastFromReceipt.Name = "delLastFromReceipt";
-            delLastFromReceipt.Size = new Size(126, 27);
-            delLastFromReceipt.TabIndex = 14;
-            delLastFromReceipt.Text = "usuń ostatni";
-            delLastFromReceipt.UseVisualStyleBackColor = false;
-            delLastFromReceipt.Click += delLastFromReceiptButton_Click;
+            delChosenFromReceipt.Anchor = AnchorStyles.None;
+            delChosenFromReceipt.BackColor = Color.IndianRed;
+            delChosenFromReceipt.Location = new Point(538, 477);
+            delChosenFromReceipt.Name = "delChosenFromReceipt";
+            delChosenFromReceipt.Size = new Size(126, 27);
+            delChosenFromReceipt.TabIndex = 14;
+            delChosenFromReceipt.Text = "Usuń wybrane";
+            delChosenFromReceipt.UseVisualStyleBackColor = false;
+            delChosenFromReceipt.Click += delChosenFromReceiptButton_Click;
             // 
             // display
             // 
@@ -254,17 +254,17 @@
             START.UseVisualStyleBackColor = false;
             START.Click += START_Click;
             // 
-            // button10
+            // PaymentButton
             // 
-            button10.Anchor = AnchorStyles.None;
-            button10.BackColor = Color.FromArgb(255, 255, 128);
-            button10.Location = new Point(670, 474);
-            button10.Name = "button10";
-            button10.Size = new Size(95, 79);
-            button10.TabIndex = 15;
-            button10.Text = "PŁATNOŚĆ";
-            button10.UseVisualStyleBackColor = false;
-            button10.Click += button10_Click;
+            PaymentButton.Anchor = AnchorStyles.None;
+            PaymentButton.BackColor = Color.FromArgb(255, 255, 128);
+            PaymentButton.Location = new Point(670, 474);
+            PaymentButton.Name = "PaymentButton";
+            PaymentButton.Size = new Size(95, 79);
+            PaymentButton.TabIndex = 15;
+            PaymentButton.Text = "PŁATNOŚĆ";
+            PaymentButton.UseVisualStyleBackColor = false;
+            PaymentButton.Click += PaymentButtonClick;
             // 
             // BaseButton
             // 
@@ -312,11 +312,11 @@
             panel1.Controls.Add(adderror);
             panel1.Controls.Add(emergency);
             panel1.Controls.Add(BaseButton);
-            panel1.Controls.Add(button10);
+            panel1.Controls.Add(PaymentButton);
             panel1.Controls.Add(START);
             panel1.Controls.Add(add);
             panel1.Controls.Add(display);
-            panel1.Controls.Add(delLastFromReceipt);
+            panel1.Controls.Add(delChosenFromReceipt);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button4);
@@ -385,11 +385,11 @@
         private Button button4;
         private Button button1;
         private Button button3;
-        private Button delLastFromReceipt;
+        private Button delChosenFromReceipt;
         public TextBox display;
         private Button add;
         private Button START;
-        private Button button10;
+        private Button PaymentButton;
         private Button BaseButton;
         private Button emergency;
         private TextBox adderror;

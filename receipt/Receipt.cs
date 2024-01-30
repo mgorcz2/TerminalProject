@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using KasaFiskalna.Produkt;
 
 namespace KasaFiskalna.receipt
@@ -29,13 +30,17 @@ namespace KasaFiskalna.receipt
             items.Add(item);
             totalPrice += item.getPrice();
         }
-        public void RemoveLast()
+        public void RemoveSelectedProducts(ListView listView)
         {
-            
-            if (items.Count > 0)
+            foreach (ListViewItem selectedItem in listView.SelectedItems)
             {
-                totalPrice -= items.ElementAt(items.Count - 1).getPrice();
-                items.RemoveAt(items.Count - 1);
+                string productName = selectedItem.SubItems[0].Text;
+                Product productToRemove = items.FirstOrDefault(p => p.getName().Equals(productName, StringComparison.OrdinalIgnoreCase));
+
+                if (productToRemove != null)
+                {
+                    items.Remove(productToRemove);
+                }
             }
         }
 
@@ -47,28 +52,6 @@ namespace KasaFiskalna.receipt
         public DateTime getDate()
         {
             return date;
-        }
-        private int GetStringWidth(string text)
-        {
-            using (Graphics graphics = Graphics.FromImage(new Bitmap(1, 1)))
-            {
-                SizeF size = graphics.MeasureString(text, new Font("Arial", 12));
-                return (int)size.Width;
-            }
-        }
-        public override string ToString()
-        {
-            StringBuilder s1 = new StringBuilder();
-            s1.Append(date+Environment.NewLine);
-            foreach (var el in items)
-            {
-                string itemName = el.getName().PadRight(30-el.getName().Length);
-                string itemPrice = el.getPrice().ToString(format:"C2");
-                s1.AppendLine($"{itemName}{itemPrice}");
-            }
-
-            s1.Append("        Łączna kwota do zapłaty: "+this.getTotalPrice()+"zł");
-            return s1.ToString();
         }
     }
 

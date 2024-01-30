@@ -24,16 +24,20 @@ namespace KasaFiskalna
         {
             add.Enabled = false;
             add.BackColor = Color.Gray;
-            delLastFromReceipt.Enabled = false;
-            delLastFromReceipt.BackColor = Color.Gray;
+            delChosenFromReceipt.Enabled = false;
+            delChosenFromReceipt.BackColor = Color.Gray;
+            PaymentButton.Enabled = false;
+            PaymentButton.BackColor = Color.Gray;
         }
         private void EnableButtons()
         {
             // W³¹cz przyciski
             add.Enabled = true;
             add.BackColor = Color.Green;
-            delLastFromReceipt.Enabled = true;
-            delLastFromReceipt.BackColor = Color.LightCoral;
+            delChosenFromReceipt.Enabled = true;
+            delChosenFromReceipt.BackColor = Color.OrangeRed;
+            PaymentButton.Enabled = true;
+            PaymentButton.BackColor = Color.DarkOrange;
         }
 
         private void EnableDisplay(bool on)
@@ -55,11 +59,15 @@ namespace KasaFiskalna
             EnableDisplay(true);
             t1 = new Transaction();
             t1.StartTransaction();
+            ReceiptBox.Clear();
         }
 
-        public void delLastFromReceiptButton_Click(object sender, EventArgs e)
+        public void delChosenFromReceiptButton_Click(object sender, EventArgs e)
         {
-            t1.GetReceipt().RemoveLast();
+            if (ReceiptBox.SelectedItems.Count > 0)
+            {
+                t1.GetReceipt().RemoveSelectedProducts(ReceiptBox);
+            }
             ReceiptBoxRefresh();
         }
         private void ReceiptBoxRefresh()
@@ -74,7 +82,11 @@ namespace KasaFiskalna
                 item.SubItems.Add(el.getPrice().ToString("C2"));
                 ReceiptBox.Items.Add(item);
             }
-            ReceiptBox.EnsureVisible(ReceiptBox.Items.Count - 1);
+
+            if (ReceiptBox.Items.Count > 1)
+            {
+                ReceiptBox.EnsureVisible(ReceiptBox.Items.Count - 1);
+            }
         }
         public void add_Click(object sender, EventArgs e)
         {
@@ -85,18 +97,16 @@ namespace KasaFiskalna
                 t1.GetReceipt().AddProduct(foundProduct);
                 adderror.ForeColor = Color.Green;
                 adderror.Text = "Dodano produkt do rachunku";
+                ReceiptBoxRefresh();
             }
             else
             {
                 adderror.ForeColor = Color.Red;
                 adderror.Text = "Nie znaleziono produktu o takim kodzie";
             }
-
-            ReceiptBoxRefresh();
-
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void PaymentButtonClick(object sender, EventArgs e)
         {
         }
 
