@@ -120,14 +120,6 @@ namespace KasaFiskalna
             SoundPlayer s1 = new SoundPlayer("Emergency.wav");
             s1.Play();
         }
-
-        public void ButtonValueToDisplay(Button sender, EventArgs e)
-        {
-            if (display.Text.Length < 4)
-            {
-                display.Text += sender.Text;
-            }
-        }
         private void buttondel_Click(object sender, EventArgs e)
         {
             if (display.Text.Length > 0)

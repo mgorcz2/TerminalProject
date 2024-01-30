@@ -46,8 +46,8 @@
             PaymentButton = new Button();
             BaseButton = new Button();
             emergency = new Button();
-            adderror = new TextBox();
             panel1 = new Panel();
+            adderror = new Label();
             ReceiptBox = new ListView();
             nameofproduct = new ColumnHeader();
             priceofproduct = new ColumnHeader();
@@ -202,6 +202,8 @@
             // 
             delChosenFromReceipt.Anchor = AnchorStyles.None;
             delChosenFromReceipt.BackColor = Color.IndianRed;
+            delChosenFromReceipt.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            delChosenFromReceipt.ForeColor = Color.White;
             delChosenFromReceipt.Location = new Point(538, 477);
             delChosenFromReceipt.Name = "delChosenFromReceipt";
             delChosenFromReceipt.Size = new Size(126, 27);
@@ -219,6 +221,7 @@
             display.Location = new Point(250, 23);
             display.MaxLength = 4;
             display.Name = "display";
+            display.ReadOnly = true;
             display.Size = new Size(282, 51);
             display.TabIndex = 11;
             display.Text = "----";
@@ -230,6 +233,7 @@
             add.Anchor = AnchorStyles.None;
             add.BackColor = Color.FromArgb(192, 255, 192);
             add.Cursor = Cursors.Hand;
+            add.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
             add.Location = new Point(538, 23);
             add.Name = "add";
             add.Size = new Size(117, 51);
@@ -258,6 +262,7 @@
             // 
             PaymentButton.Anchor = AnchorStyles.None;
             PaymentButton.BackColor = Color.FromArgb(255, 255, 128);
+            PaymentButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
             PaymentButton.Location = new Point(670, 474);
             PaymentButton.Name = "PaymentButton";
             PaymentButton.Size = new Size(95, 79);
@@ -292,24 +297,12 @@
             emergency.UseVisualStyleBackColor = false;
             emergency.Click += emergency_Click;
             // 
-            // adderror
-            // 
-            adderror.Anchor = AnchorStyles.None;
-            adderror.BackColor = SystemColors.ActiveBorder;
-            adderror.ForeColor = Color.Red;
-            adderror.Location = new Point(661, 23);
-            adderror.Multiline = true;
-            adderror.Name = "adderror";
-            adderror.ReadOnly = true;
-            adderror.Size = new Size(104, 50);
-            adderror.TabIndex = 19;
-            // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Gray;
-            panel1.Controls.Add(ReceiptBox);
             panel1.Controls.Add(adderror);
+            panel1.Controls.Add(ReceiptBox);
             panel1.Controls.Add(emergency);
             panel1.Controls.Add(BaseButton);
             panel1.Controls.Add(PaymentButton);
@@ -333,6 +326,15 @@
             panel1.Size = new Size(840, 644);
             panel1.TabIndex = 18;
             // 
+            // adderror
+            // 
+            adderror.Anchor = AnchorStyles.None;
+            adderror.BackColor = Color.DarkGray;
+            adderror.Location = new Point(661, 23);
+            adderror.Name = "adderror";
+            adderror.Size = new Size(128, 51);
+            adderror.TabIndex = 21;
+            // 
             // ReceiptBox
             // 
             ReceiptBox.Anchor = AnchorStyles.None;
@@ -342,7 +344,7 @@
             ReceiptBox.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             ReceiptBox.Location = new Point(538, 86);
             ReceiptBox.Name = "ReceiptBox";
-            ReceiptBox.Size = new Size(251, 373);
+            ReceiptBox.Size = new Size(251, 378);
             ReceiptBox.TabIndex = 20;
             ReceiptBox.UseCompatibleStateImageBehavior = false;
             ReceiptBox.ColumnWidthChanging += receiptBoxColumnChanger;
@@ -392,10 +394,10 @@
         private Button PaymentButton;
         private Button BaseButton;
         private Button emergency;
-        private TextBox adderror;
         private Panel panel1;
         private ListView ReceiptBox;
         private ColumnHeader nameofproduct;
         private ColumnHeader priceofproduct;
+        private Label adderror;
     }
 }

@@ -11,6 +11,7 @@ namespace KasaFiskalna
     internal class Transaction : IKasa
     {
         private Receipt receipt;
+        private List<Transaction> historyTransactions;    //database
         public Receipt GetReceipt()
         {
             return receipt;
@@ -23,7 +24,7 @@ namespace KasaFiskalna
 
         public void End()
         {
-            throw new NotImplementedException();
+            historyTransactions.Add(this);
         }
         public void StartTransaction()
         {

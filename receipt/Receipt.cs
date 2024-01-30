@@ -35,7 +35,7 @@ namespace KasaFiskalna.receipt
             foreach (ListViewItem selectedItem in listView.SelectedItems)
             {
                 string productName = selectedItem.SubItems[0].Text;
-                Product productToRemove = items.FirstOrDefault(p => p.getName().Equals(productName, StringComparison.OrdinalIgnoreCase));
+                Product productToRemove = items.FirstOrDefault(p => p.getName().Equals(productName));
 
                 if (productToRemove != null)
                 {
