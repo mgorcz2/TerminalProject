@@ -9,7 +9,7 @@ using KasaFiskalna.receipt;
 
 namespace KasaFiskalna
 {
-    internal class Transaction : IKasa
+    internal class Transaction : ITransaction
     {
         private Receipt receipt;
         private List<Transaction> historyTransactions = new List<Transaction>();    //database

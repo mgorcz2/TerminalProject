@@ -7,7 +7,7 @@ using KasaFiskalna.Produkt;
 
 namespace KasaFiskalna
 {
-    internal interface IKasa
+    internal interface ITransaction
     {
         public void StartTransaction();
         public void End();

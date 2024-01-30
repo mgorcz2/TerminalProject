@@ -205,6 +205,7 @@
             // 
             delChosenFromReceipt.Anchor = AnchorStyles.None;
             delChosenFromReceipt.BackColor = Color.IndianRed;
+            delChosenFromReceipt.Cursor = Cursors.Hand;
             delChosenFromReceipt.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
             delChosenFromReceipt.ForeColor = Color.White;
             delChosenFromReceipt.Location = new Point(538, 468);
@@ -334,9 +335,11 @@
             // 
             // TerminaPaymentCheckBox
             // 
+            TerminaPaymentCheckBox.Anchor = AnchorStyles.None;
             TerminaPaymentCheckBox.AutoSize = true;
             TerminaPaymentCheckBox.BackColor = Color.LightYellow;
             TerminaPaymentCheckBox.CheckAlign = ContentAlignment.MiddleRight;
+            TerminaPaymentCheckBox.Cursor = Cursors.Hand;
             TerminaPaymentCheckBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             TerminaPaymentCheckBox.ForeColor = Color.FromArgb(255, 128, 0);
             TerminaPaymentCheckBox.Location = new Point(560, 557);
@@ -352,6 +355,7 @@
             CashPaymentCheckBox.AutoSize = true;
             CashPaymentCheckBox.BackColor = Color.LightYellow;
             CashPaymentCheckBox.CheckAlign = ContentAlignment.MiddleRight;
+            CashPaymentCheckBox.Cursor = Cursors.Hand;
             CashPaymentCheckBox.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             CashPaymentCheckBox.ForeColor = Color.Green;
             CashPaymentCheckBox.Location = new Point(561, 526);
@@ -364,8 +368,8 @@
             // TotalPriceLabel
             // 
             TotalPriceLabel.Anchor = AnchorStyles.None;
-            TotalPriceLabel.BackColor = Color.Silver;
-            TotalPriceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            TotalPriceLabel.BackColor = Color.FromArgb(192, 255, 255);
+            TotalPriceLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             TotalPriceLabel.Location = new Point(670, 468);
             TotalPriceLabel.Name = "TotalPriceLabel";
             TotalPriceLabel.Size = new Size(119, 45);

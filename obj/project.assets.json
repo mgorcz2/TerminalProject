@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\STUDIAA\\KasaFiskalna\\KasaFiskalna\\KasaFiskalna.csproj",
-      "projectName": "KasaFiskalna",
-      "projectPath": "E:\\STUDIAA\\KasaFiskalna\\KasaFiskalna\\KasaFiskalna.csproj",
+      "projectUniqueName": "E:\\STUDIAA\\KasaFiskalna\\KasaFiskalna\\Terminal.csproj",
+      "projectName": "Terminal",
+      "projectPath": "E:\\STUDIAA\\KasaFiskalna\\KasaFiskalna\\Terminal.csproj",
       "packagesPath": "C:\\Users\\Marcin\\.nuget\\packages\\",
       "outputPath": "E:\\STUDIAA\\KasaFiskalna\\KasaFiskalna\\obj\\",
       "projectStyle": "PackageReference",

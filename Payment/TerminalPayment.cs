@@ -18,7 +18,6 @@ namespace KasaFiskalna.Payment
                                     " udała się");
                     return true;
                 }
-
                 return false;
             }
             return false;

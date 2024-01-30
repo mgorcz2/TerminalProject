@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("KasaFiskalna")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Terminal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+049d18c1ac82ed4c41c50f9a5b4c9b1522612278")]
-[assembly: System.Reflection.AssemblyProductAttribute("KasaFiskalna")]
-[assembly: System.Reflection.AssemblyTitleAttribute("KasaFiskalna")]
+[assembly: System.Reflection.AssemblyProductAttribute("Terminal")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Terminal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
