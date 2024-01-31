@@ -1,0 +1,6 @@
+C:\Users\Marcin\Desktop\PDF\Terminal.exe
+C:\Users\Marcin\Desktop\PDF\Emergency.wav
+C:\Users\Marcin\Desktop\PDF\Terminal.dll
+C:\Users\Marcin\Desktop\PDF\Terminal.deps.json
+C:\Users\Marcin\Desktop\PDF\Terminal.runtimeconfig.json
+C:\Users\Marcin\Desktop\PDF\Terminal.pdb

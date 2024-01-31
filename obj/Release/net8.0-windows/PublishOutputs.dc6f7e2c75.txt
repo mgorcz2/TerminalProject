@@ -1,0 +1,6 @@
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows\app.publish\Terminal.exe
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows\app.publish\Emergency.wav
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows\app.publish\Terminal.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows\app.publish\Terminal.deps.json
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows\app.publish\Terminal.runtimeconfig.json
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows\app.publish\Terminal.pdb
