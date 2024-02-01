@@ -1,2 +1,2 @@
-# KasaFiskalna
+Terminal
 My first project.
