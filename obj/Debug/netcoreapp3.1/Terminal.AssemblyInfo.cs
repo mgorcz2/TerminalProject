@@ -18,8 +18,6 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("Terminal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Terminal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
 

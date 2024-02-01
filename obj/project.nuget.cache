@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "18pCD9LdPKLc27rV48E4DrzqNJNMSlfv9Ky6KnrzJe/vWjd05wBfp4AQSftQYKjVK+pjTFoiwM+701hoTM5Tjg==",
+  "dgSpecHash": "VbLszKkNovM/O7owXcrgNa08dTwnbJ+WHllo7yZbvlt6bHe8Mz79Nscz++FR/jEtt8S8hV1yjKldgsninX0pwQ==",
   "success": true,
   "projectFilePath": "E:\\STUDIAA\\KasaFiskalna\\KasaFiskalna\\Terminal.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Marcin\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\Marcin\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
+    "C:\\Users\\Marcin\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\Marcin\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\Marcin\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

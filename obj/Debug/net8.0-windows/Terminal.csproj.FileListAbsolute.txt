@@ -17,3 +17,13 @@ E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\refint\Terminal.dl
 E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\Terminal.pdb
 E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\Terminal.genruntimeconfig.cache
 E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\ref\Terminal.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\System.Data.OleDb.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\Terminal.csproj.AssemblyReference.cache
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\obj\Debug\net8.0-windows\Terminal.csproj.CopyComplete
