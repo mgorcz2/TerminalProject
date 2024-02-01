@@ -9,8 +9,8 @@ namespace KasaFiskalna
     public partial class Form1 : Form
     {
         private Transaction t1;
+        private Form2 form2Instance;
         private readonly BaseOfProducts baseOfProducts;
-        private Form2 form2 = new Form2();
         public void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -148,7 +148,15 @@ namespace KasaFiskalna
         }
         private void Base_Click(object sender, EventArgs e)
         {
-            form2.Show();
+            if (form2Instance == null || form2Instance.IsDisposed)
+            {
+                form2Instance = new Form2();
+                form2Instance.Show();
+            }
+            else
+            {
+                form2Instance.Focus();
+            }
         }
         private void emergency_Click(object sender, EventArgs e)
         {

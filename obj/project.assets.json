@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {
+    "net8.0-windows7.0": {
       "System.Configuration.ConfigurationManager/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -9,12 +9,12 @@
           "System.Security.Cryptography.ProtectedData": "8.0.0"
         },
         "compile": {
-          "lib/net7.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
@@ -29,12 +29,12 @@
           "System.Diagnostics.PerformanceCounter": "8.0.0"
         },
         "compile": {
-          "lib/net7.0/System.Data.OleDb.dll": {
+          "lib/net8.0/System.Data.OleDb.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Data.OleDb.dll": {
+          "lib/net8.0/System.Data.OleDb.dll": {
             "related": ".xml"
           }
         },
@@ -42,7 +42,7 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net7.0/System.Data.OleDb.dll": {
+          "runtimes/win/lib/net8.0/System.Data.OleDb.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -51,12 +51,12 @@
       "System.Diagnostics.EventLog/8.0.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.Diagnostics.EventLog.dll": {
+          "lib/net8.0/System.Diagnostics.EventLog.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Diagnostics.EventLog.dll": {
+          "lib/net8.0/System.Diagnostics.EventLog.dll": {
             "related": ".xml"
           }
         },
@@ -64,11 +64,11 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll": {
+          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll": {
             "assetType": "runtime",
             "rid": "win"
           },
-          "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.dll": {
+          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -80,12 +80,12 @@
           "System.Configuration.ConfigurationManager": "8.0.0"
         },
         "compile": {
-          "lib/net7.0/System.Diagnostics.PerformanceCounter.dll": {
+          "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Diagnostics.PerformanceCounter.dll": {
+          "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
             "related": ".xml"
           }
         },
@@ -93,7 +93,7 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net7.0/System.Diagnostics.PerformanceCounter.dll": {
+          "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -102,12 +102,12 @@
       "System.Security.Cryptography.ProtectedData/8.0.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Security.Cryptography.ProtectedData.dll": {
+          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
@@ -297,7 +297,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": [
+    "net8.0-windows7.0": [
       "System.Data.OleDb >= 8.0.0"
     ]
   },
@@ -323,7 +323,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows7.0"
+        "net8.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -331,8 +331,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows7.0",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -343,8 +343,8 @@
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows7.0",
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows7.0",
         "dependencies": {
           "System.Data.OleDb": {
             "target": "Package",
@@ -370,7 +370,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
