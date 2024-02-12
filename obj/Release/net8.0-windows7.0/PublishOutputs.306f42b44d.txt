@@ -1,0 +1,14 @@
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\Terminal.exe
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\Emergency.wav
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\Terminal.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\Terminal.deps.json
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\Terminal.runtimeconfig.json
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\Terminal.pdb
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\System.Configuration.ConfigurationManager.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\System.Data.OleDb.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\System.Diagnostics.EventLog.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\System.Diagnostics.PerformanceCounter.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\System.Security.Cryptography.ProtectedData.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\STUDIAA\KasaFiskalna\KasaFiskalna\bin\Release\net8.0-windows7.0\app.publish\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll

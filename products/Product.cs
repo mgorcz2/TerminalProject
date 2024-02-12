@@ -12,9 +12,6 @@ namespace KasaFiskalna.Produkt
         private string name;
         private double price;
 
-
-
-
         public Product(string code, string name, double price)
         {
             this.code = code;

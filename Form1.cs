@@ -1,5 +1,4 @@
 
-
 using KasaFiskalna.Produkt;
 using System.Media;
 using KasaFiskalna.Payment;
@@ -10,7 +9,6 @@ namespace KasaFiskalna
     {
         private Transaction t1;
         private Form2 form2Instance;
-        private readonly BaseOfProducts baseOfProducts;
         public void Form1_Load(object sender, EventArgs e)
         {
         }

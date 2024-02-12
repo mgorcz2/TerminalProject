@@ -9,7 +9,6 @@ namespace KasaFiskalna
         {
             InitializeComponent();
             listViewRefresh();
-
         }
 
         public void listViewRefresh()
